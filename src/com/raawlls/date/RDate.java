@@ -29,7 +29,7 @@ public class RDate extends Date {
      * @param date
      * @param field
      * @param amount
-     * @return this RDate
+     * @return RDate
      */
     private static Date _add(Date date, int field, int amount) {
         Calendar cal = new GregorianCalendar();
@@ -109,7 +109,6 @@ public class RDate extends Date {
         return this;
     }
 
-    // Convenience method to set this date to midnight
     public static Date midnight(Date date) {
         Calendar cal = new GregorianCalendar();
         cal.setTime(date);
@@ -125,7 +124,6 @@ public class RDate extends Date {
         return this;
     }
 
-    // Convenience method to set this date to noon
     public static Date noon(Date date) {
         Calendar cal = new GregorianCalendar();
         cal.setTime(date);
@@ -174,8 +172,6 @@ public class RDate extends Date {
         setTime(yearStart(this).getTime());
         return this;
     }
-
-    // Convenience methods for checking common attributes of the date
 
     public static boolean isAm(Date date) {
         Calendar cal = new GregorianCalendar();
